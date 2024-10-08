@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ukr" xml:lang="ukr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="© Valeriy Sydorenko, 2023">
+<meta name="dcterms.date" content="2023-09-05">
+<meta name="description" content="Документ зроблено за допомогою Quarto">
+
+<title>Лабораторна робота №1. Інсталяція та налаштування Python-середовища</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="python_lab_1_quarto_files/libs/clipboard/clipboard.min.js"></script>
+<script src="python_lab_1_quarto_files/libs/quarto-html/quarto.js"></script>
+<script src="python_lab_1_quarto_files/libs/quarto-html/popper.min.js"></script>
+<script src="python_lab_1_quarto_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="python_lab_1_quarto_files/libs/quarto-html/anchor.min.js"></script>
+<link href="python_lab_1_quarto_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="python_lab_1_quarto_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="python_lab_1_quarto_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="python_lab_1_quarto_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="python_lab_1_quarto_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#інсталяція-python" id="toc-інсталяція-python" class="nav-link active" data-scroll-target="#інсталяція-python">Інсталяція Python</a></li>
+  <li><a href="#інсталяція-та-налаштування-ide-pycharm" id="toc-інсталяція-та-налаштування-ide-pycharm" class="nav-link" data-scroll-target="#інсталяція-та-налаштування-ide-pycharm">Інсталяція та налаштування IDE PyCharm</a>
+  <ul class="collapse">
+  <li><a href="#інсталяція" id="toc-інсталяція" class="nav-link" data-scroll-target="#інсталяція">Інсталяція</a></li>
+  <li><a href="#створення-python-проєкта" id="toc-створення-python-проєкта" class="nav-link" data-scroll-target="#створення-python-проєкта">Створення Python-проєкта</a></li>
+  </ul></li>
+  <li><a href="#написання-та-запуск-коду.-налаштування-pycharm-git-github-середовища" id="toc-написання-та-запуск-коду.-налаштування-pycharm-git-github-середовища" class="nav-link" data-scroll-target="#написання-та-запуск-коду.-налаштування-pycharm-git-github-середовища">Написання та запуск коду. Налаштування PyCharm-Git-GitHub середовища</a>
+  <ul class="collapse">
+  <li><a href="#cтворення-git-репозиторію-і-звязування-його-з-python-проєктом" id="toc-cтворення-git-репозиторію-і-звязування-його-з-python-проєктом" class="nav-link" data-scroll-target="#cтворення-git-репозиторію-і-звязування-його-з-python-проєктом">Cтворення git-репозиторію і зв’язування його з python-проєктом</a></li>
+  <li><a href="#звязування-створеного-python-проєкта-з-відддаленим-git-репозиторієм" id="toc-звязування-створеного-python-проєкта-з-відддаленим-git-репозиторієм" class="nav-link" data-scroll-target="#звязування-створеного-python-проєкта-з-відддаленим-git-репозиторієм">Зв’язування створеного python-проєкта з відддаленим Git-репозиторієм</a></li>
+  <li><a href="#робота-з-віддаленим-репозиторієм" id="toc-робота-з-віддаленим-репозиторієм" class="nav-link" data-scroll-target="#робота-з-віддаленим-репозиторієм">Робота з віддаленим репозиторієм</a></li>
+  </ul></li>
+  <li><a href="#завдання-для-самостіної-роботи" id="toc-завдання-для-самостіної-роботи" class="nav-link" data-scroll-target="#завдання-для-самостіної-роботи">Завдання для самостіної роботи</a></li>
+  <li><a href="#контрольні-запитання" id="toc-контрольні-запитання" class="nav-link" data-scroll-target="#контрольні-запитання">Контрольні запитання</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Лабораторна робота №1. Інсталяція та налаштування Python-середовища</h1>
+</div>
+
+<div>
+  <div class="description">
+    Документ зроблено за допомогою <a href="https://quarto.org/">Quarto</a>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>© <a href="https://www.linkedin.com/in/valeriy-sydorenko-6782279a/">Valeriy Sydorenko</a>, 2023 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 5, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><strong>Мета:</strong> <em>quick start для роботи з python3 у середовищі IDE PyCharm системою контроля версій git.</em></p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Примітка
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Перед виконанням лабораторної роботи необхідно опрацювати матеріал <strong>Лекції 1</strong>.</p>
+</div>
+</div>
+<section id="що-ви-будете-вміти" class="level4">
+<h4 class="anchored" data-anchor-id="що-ви-будете-вміти">Що ви будете вміти?</h4>
+<ul>
+<li>Інсталювати дистрибутив Python.</li>
+<li>Інсталювати та налаштовувати IDE PyCharm.</li>
+<li>Створювати Python-проєкт у PyCharm та зв’язувати його з СКВ git.</li>
+<li>Писати і відлагоджувати прості програми на python у середовищі PyCharm.</li>
+<li>Комітити написаний код у віддалений репозиторій на на GitHub</li>
+</ul>
+</section>
+<section id="інсталяція-python" class="level2">
+<h2 class="anchored" data-anchor-id="інсталяція-python">Інсталяція Python</h2>
+<ol type="1">
+<li><p>Ідемо на <a href="https://www.python.org/downloads/">офіційний сайт Python</a>.</p></li>
+<li><p>Завантажуємо та встановлюємо актуальну версію дистрибутиву Python3.</p></li>
+<li><p>Встановлюємо python, (бажано прийняти праметри інсталяції за замовчанням).</p></li>
+<li><p>Запускаємо консоль <code>cmd</code> і запускаємо python командою <code>python</code>:</p></li>
+</ol>
+<p><img src="image/consol.png" class="img-fluid"></p>
+<p>Якщо інтерпретатор встановлений правильно, має з’явитися наступний інтерфейс взаємодії з ним:</p>
+<p><img src="image/interp.png" class="img-fluid"></p>
+<p>Для виходу з режиму роботи з інтерпретаром назад у консоль потрібно натиснути комбінпцію клавіш <code>Ctrl-z</code>.</p>
+</section>
+<section id="інсталяція-та-налаштування-ide-pycharm" class="level2">
+<h2 class="anchored" data-anchor-id="інсталяція-та-налаштування-ide-pycharm">Інсталяція та налаштування IDE PyCharm</h2>
+<section id="інсталяція" class="level3">
+<h3 class="anchored" data-anchor-id="інсталяція">Інсталяція</h3>
+<p>Після встановлення інтерпретатора python потрібно завантажити, встановити і налаштувати IDE PyCharm. Для цього необхідно:</p>
+<ol type="1">
+<li><p>Завантажити безкоштовну community версію, звернувшись за <a href="https://www.jetbrains.com/ru-ru/pycharm/download/#section=windows">посиланням</a>.</p></li>
+<li><p>Виконати інсталяцію IDE PytCharm. При інсталяції <strong>важливо не забути проапдейти змінну оточення PATH</strong>, для того щоби можна було з поточного каталогу просто завантажувати код у середовище розробки.</p></li>
+<li><p>Після завершення інсталяції обов’язково перезавантажити комп’ютер.</p></li>
+<li><p>Запустити IDE PyCharm. Якщо всі попередні кроки виконано коректно, на екрані має з’явитися приблизно таке:</p></li>
+</ol>
+<p><img src="image/pycharm.png" class="img-fluid"></p>
+</section>
+<section id="створення-python-проєкта" class="level3">
+<h3 class="anchored" data-anchor-id="створення-python-проєкта">Створення Python-проєкта</h3>
+<p>Після інсталяції ми маємо три наступні можливості:</p>
+<ul>
+<li>створити новий проект (New Project);</li>
+<li>відкрити існуючий (Open);</li>
+<li>імпортувати його віддаленого репозиторію, наприклад, з GitHub.</li>
+</ul>
+<p>Розглянемо перший варіант – створимо проєкт з нуля. Для цього у вікні, що відкрилося, потрібно звернути увагу на наступні важливі речі:</p>
+<ul>
+<li>спосіб встановлення віртуального середовища;</li>
+<li>місце розташування проєкта, що створюється;</li>
+<li>версію базового інтерпретатора.</li>
+</ul>
+<p><img src="image/newproject.png" class="img-fluid"></p>
+<p>Після створення проєкта ми маємо опинитися в середовищі, яке буде мати наступний вигляд.</p>
+<p><img src="image/pycharm1.png" class="img-fluid"></p>
+<p>Це так званий старий інтерфейс програми. Можна встановити новий (<em>FileUI</em>) і перезавантажити PyCharm.</p>
+<p>Для того, щоби встановити потрібні пакети, можна скористатися менеджером пакетів <code>pip</code> і зробити це в консолі, або перейти до <em>File/Settings/Project/Python Interpretator</em>.</p>
+</section>
+</section>
+<section id="написання-та-запуск-коду.-налаштування-pycharm-git-github-середовища" class="level2">
+<h2 class="anchored" data-anchor-id="написання-та-запуск-коду.-налаштування-pycharm-git-github-середовища">Написання та запуск коду. Налаштування PyCharm-Git-GitHub середовища</h2>
+<p>Для ефективної, зокрема командної, роботи потрібно створений проект зв’язати з системою контроля версій (СКВ).<br>
+Існують різні СКВ, найбільш популярною з яких наразі є <a href="https://git-scm.com/">Git</a>.<br>
+Для того, щоби налаштувати середовище PyCharm-Git-GitHub необхідно:</p>
+<ol type="1">
+<li>Завантажити і налаштувати СКВ Git на своєму локальному комп’ютері.</li>
+<li>Створити акаунт на ресурсі <a href="https://github.com/">GitHub</a>.</li>
+<li>Створити репозиторій на GitHub у своєму акаунті.</li>
+<li>Зв’язати його із створеним у PyCharm проєктом на python.</li>
+</ol>
+<p>Будемо вважати, що п. 1-3 вами виконані і покажемо як виконати п. 4.</p>
+<section id="cтворення-git-репозиторію-і-звязування-його-з-python-проєктом" class="level3">
+<h3 class="anchored" data-anchor-id="cтворення-git-репозиторію-і-звязування-його-з-python-проєктом">Cтворення git-репозиторію і зв’язування його з python-проєктом</h3>
+<p><img src="image/git_init.png" class="img-fluid"></p>
+<p>Ця команда аналогічна команді <code>git init</code>, яка ініціює створення git-репозиторію у поточному каталозі, в якому знаходиться наш python-проєкт. Наступний крок – зв’язування його з віддаленим репозиторієм, який знаходиться на GitHub.</p>
+</section>
+<section id="звязування-створеного-python-проєкта-з-відддаленим-git-репозиторієм" class="level3">
+<h3 class="anchored" data-anchor-id="звязування-створеного-python-проєкта-з-відддаленим-git-репозиторієм">Зв’язування створеного python-проєкта з відддаленим Git-репозиторієм</h3>
+<p><img src="python_lab_1_quarto_files/figure-html/6f547ad8-1-image.png" class="img-fluid"></p>
+<p>Зверніть увагу, що пункт меню змінив назву з VCS на Git. Далі потрібно скопіювати посилання з GitHub-репозиторію і вставити її у віповідне поле в PyCharm. При цьому слід враховувати протокол, за яким налаштована взаємодія Git-на локальному комп’ютері з віддаленим репозиторієм: SSH або HTTPS.</p>
+<p><img src="python_lab_1_quarto_files/figure-html/e158b667-1-image.png" class="img-fluid"></p>
+<p><img src="python_lab_1_quarto_files/figure-html/86415420-1-image.png" class="img-fluid"></p>
+</section>
+<section id="робота-з-віддаленим-репозиторієм" class="level3">
+<h3 class="anchored" data-anchor-id="робота-з-віддаленим-репозиторієм">Робота з віддаленим репозиторієм</h3>
+<p>Будь-які зміни в проєкті можуть бути додані в індекс Git-репозиторію і закомічені у репозиторій на локальній машині. Після того копія локального репо може бути записана у віддалений репо на GitHub. Перелік необхідних команд Git, якщо викоростовувати для цього консоль, може бути таким:</p>
+<ul>
+<li><p><code>git status</code> - перевірка статусу файлів;</p></li>
+<li><p><code>git add .</code> - додавання всіх новостворених файлів у індекс;</p></li>
+<li><p><code>git commit -m "коментар до коміту"</code> - додавання змін у локальний Git-репозиторій;</p></li>
+<li><p><code>git push -u origin master</code> - відсилання поточної локальної копії Git-репо на GitHub-репозиторій.</p></li>
+</ul>
+<p>Початківці це можуть зробити простіше через меню PyCharm.</p>
+<p>Після цього ми будемо мати налаштоване середовище для ефективного написання та відлагодження коду на Python з можливістю збереження всіх версій проєкту як у локальному Git-середовищі, так і у віддаленому на GiHub.</p>
+</section>
+</section>
+<section id="завдання-для-самостіної-роботи" class="level2">
+<h2 class="anchored" data-anchor-id="завдання-для-самостіної-роботи">Завдання для самостіної роботи</h2>
+<ol type="1">
+<li><p>Завантажити і встановити <code>Python</code>.</p></li>
+<li><p>Завантажити, встановити і налаштувати IDE PyCharm у відповідності з інструкціями, описаними вище</p></li>
+<li><p>Завантажити, встановити і налаштувати систему контроля версій Git на вашому робочому комп’ютері.</p></li>
+<li><p>Створити акаунт на GitHub та стоврити в ньому новий проєкт з іменем <strong>StudentLastName_project</strong>.</p></li>
+<li><p>Налаштувати зв’язок PyCharm з Git.</p></li>
+<li><p>Налаштувати зв’язок PyCharm з віддаленим репозиторієм на GitHub.</p></li>
+<li><p>Створити файл <strong>lab_1_StudentLastName.py</strong> з кодом, який виводить фразу <strong>“Привіт, Ваше Прізвище”</strong>.</p></li>
+<li><p>Закомітити файл у локальний репозиторій.</p></li>
+<li><p>Відправити (“запушити”) поточну версію Git-проєкта у віддалений репозиторій на GitHub.</p></li>
+<li><p>Звіт має складатися з файлу (за основу взяти <strong>цей Python-зошит</strong>) з відповідними скріншотами <code>lab_1_StudentLastName.ipynb</code>. У звіті має бути посилання на Ваш GitHub-репозиторій з Вашим проєктом та відповіді на контролі запитання.</p></li>
+</ol>
+</section>
+<section id="контрольні-запитання" class="level2">
+<h2 class="anchored" data-anchor-id="контрольні-запитання">Контрольні запитання</h2>
+<ol type="1">
+<li><p>У чому відмінність інтерпретатора від компілятора? Python – компілятор чи інтерпретатор?</p></li>
+<li><p>Що таке IDE PyCharm?</p></li>
+<li><p>Що таке система контроля версій (СКВ) і для чого вона призначена? У чому принципова відмінність СКВ SVN та GIT?</p></li>
+<li><p>Що відбувається при виконанні команди <code>git add .</code>?</p></li>
+<li><p>Що відбувається при виконанні команди <code>git commit</code>?</p></li>
+<li><p>Якою Git-командою виконується розміщення локальної копії Git-репозиторію проєкта на віддаленому, що знаходиться на GitHub?</p></li>
+</ol>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li><a href="https://uk.wikipedia.org/wiki/Anaconda_(Python_distribution)">Anaconda (Python distribution)</a></li>
+<li><a href="https://conda.io/en/latest/">Conda</a></li>
+<li><a href="https://git-scm.com/book/en/v2">Pro Git Book</a></li>
+<li><a href="https://pythoninstitute.org/">OpenEDG Python Institute</a></li>
+<li><a href="https://www.netacad.com/">Cisco. Networking Academy</a></li>
+<li><a href="https://www.youtube.com/watch?v=nQMddf_6KoM&amp;list=PLV0FNhq3XMOKljD7POtuWVAZn8wXcn4-L">ЧТО ТАКОЕ ЯП PYTHON? УСТАНОВКА ПАЙТОНА НА WINDOWS 11 !</a></li>
+<li><a href="https://data-visualization-blog.netlify.app/posts/quarto/">Научно-издательская система Quarto</a></li>
+<li><a href="https://docs.python.org/3/library/index.html">The Python Standard Library</a></li>
+<li><a href="https://quarto.org/docs/authoring/callouts.html">Callout Blocks. Markdown Syntax</a></li>
+</ol>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
