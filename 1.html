@@ -8,7 +8,7 @@
 
 <meta name="description" content="Документ зроблено за допомогою Quarto">
 
-<title>Лабораторна робота №2. Функція print()</title>
+<title>Лабораторна робота №1. Інсталяція та налаштування Python-середовища</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,83 +21,20 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="python_lab_2_quarto_files/libs/clipboard/clipboard.min.js"></script>
-<script src="python_lab_2_quarto_files/libs/quarto-html/quarto.js"></script>
-<script src="python_lab_2_quarto_files/libs/quarto-html/popper.min.js"></script>
-<script src="python_lab_2_quarto_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="python_lab_2_quarto_files/libs/quarto-html/anchor.min.js"></script>
-<link href="python_lab_2_quarto_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="python_lab_2_quarto_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="python_lab_2_quarto_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="python_lab_2_quarto_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="python_lab_2_quarto_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="1_files/libs/quarto-html/quarto.js"></script>
+<script src="1_files/libs/quarto-html/popper.min.js"></script>
+<script src="1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="1_files/libs/quarto-html/anchor.min.js"></script>
+<link href="1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="1_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="1_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -119,7 +56,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Лабораторна робота №2. Функція <code>print()</code></h1>
+<h1 class="title">Лабораторна робота №1. Інсталяція та налаштування Python-середовища</h1>
 </div>
 
 <div>
@@ -141,7 +78,7 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Мета:</strong> <em>навчитися писати і запускати найпростіші програми на Python з використанням функції <code>print()</code></em></p>
+<p><strong>Мета:</strong> <em>quick start для роботи з python3 у середовищі IDE PyCharm системою контроля версій git.</em></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -152,179 +89,123 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Перед виконанням лабораторної роботи необхідно опрацювати матеріал <strong>Лекції 2</strong>.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Примітка
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>У лабораторній роботі використано матеріали <a href="https://pythoninstitute.org/pcep">python institute.</a></p>
-</div>
-</div>
-<ol type="1">
-<li>Змінити код програми, щоби очікуваний результат виглядав наступним чином:</li>
-</ol>
-<p><code>Programming***Essentials***in...Python</code></p>
-<div id="22fda584" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Programming"</span>, <span class="st">"Essential"</span>, <span class="st">"in"</span>, sep <span class="op">=</span> <span class="st">'***'</span>, end <span class="op">=</span> <span class="st">'...'</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Python"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Programming***Essential***in...Python</code></pre>
-</div>
-</div>
-<!-- 2 -->
-<ol start="2" type="1">
-<li>Написати програму, яка виводила б на екран наступну картинку:</li>
-</ol>
-<p><img src="attachment:image.png" class="img-fluid"></p>
-<div id="2257b9b9" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'     *</span><span class="ch">\n</span><span class="st">'</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>      <span class="st">'    *'</span>,<span class="st">'*</span><span class="ch">\n</span><span class="st">'</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">'   *'</span>,<span class="st">'  *</span><span class="ch">\n</span><span class="st">'</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">'  *'</span>,<span class="st">'    *</span><span class="ch">\n</span><span class="st">'</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">' ***'</span>, <span class="st">'  ***</span><span class="ch">\n</span><span class="st">'</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">'   *'</span>, <span class="st">'  *</span><span class="ch">\n</span><span class="st">'</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">'   *'</span>, <span class="st">'  *</span><span class="ch">\n</span><span class="st">'</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">'   *****'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>     *
-    * *
-   *   *
-  *     *
- ***   ***
-   *   *
-   *   *
-   *****</code></pre>
-</div>
-</div>
-<ol start="3" type="1">
-<li>Вивести на екран наступний рядок:</li>
-</ol>
-<p><code>I'm student</code></p>
-<div id="d7ee412d" class="cell" data-execution_count="3">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"I'm student"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>I'm student</code></pre>
-</div>
-</div>
-<ol start="4" type="1">
-<li>Написати фрагмент кода в один рядок, використовуючи функцію <code>print()</code>, а також символи нового рядка та esсape-символи, щоби відповідати очикуваному результату, виведеному у трьох рядках:</li>
-</ol>
-<p><img src="attachment:image-2.png" class="img-fluid"></p>
-<div id="662a8568" class="cell" data-execution_count="4">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'"I</span><span class="ch">\'</span><span class="st">m"</span><span class="ch">\n\"\"</span><span class="st">learning</span><span class="ch">\"\"\n\"\"\"</span><span class="st">Python</span><span class="ch">\"\"\"</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>"I'm"
-""learning""
-"""Python"""</code></pre>
-</div>
-</div>
-<ol start="5" type="1">
-<li>Чому в десятковій системі дорівнює <span class="math inline">\(500_8\)</span>? Написати код на Python.</li>
-</ol>
-<div id="4d0572ba" class="cell" data-execution_count="5">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((<span class="dv">5</span> <span class="op">*</span> <span class="dv">8</span> <span class="op">**</span> <span class="dv">2</span>) <span class="op">+</span> (<span class="dv">0</span> <span class="op">*</span> <span class="dv">8</span> <span class="op">**</span> <span class="dv">1</span>) <span class="op">+</span> (<span class="dv">0</span> <span class="op">*</span> <span class="dv">8</span> <span class="op">**</span> <span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>320</code></pre>
-</div>
-</div>
-<ol start="6" type="1">
-<li>Чому в десятковій системі дорівнює <span class="math inline">\(777_{16}\)</span>? Написати код на Python.</li>
-</ol>
-<div id="75c81d9a" class="cell" data-execution_count="6">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((<span class="dv">7</span> <span class="op">*</span> <span class="dv">16</span> <span class="op">**</span> <span class="dv">2</span>) <span class="op">+</span> (<span class="dv">7</span> <span class="op">*</span> <span class="dv">16</span> <span class="op">**</span> <span class="dv">1</span>) <span class="op">+</span> (<span class="dv">7</span> <span class="op">*</span> <span class="dv">16</span> <span class="op">**</span> <span class="dv">0</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>1911</code></pre>
+<p>Перед виконанням лабораторної роботи необхідно опрацювати матеріал <strong>Лекції 1</strong>.</p>
 </div>
 </div>
 <section id="завдання-для-самостіної-роботи" class="level2">
 <h2 class="anchored" data-anchor-id="завдання-для-самостіної-роботи">Завдання для самостіної роботи</h2>
 <ol type="1">
-<li><p>Виконати п. 1-6, наведені вище у цьому зошиті.</p></li>
-<li><p>Створити файл <strong>lab_2_StudentLastName.py</strong> з написаним кодом.</p></li>
+<li>Завантажити і встановити <code>Python</code>.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="attachment:%7B9B382841-F04F-4A5A-8C10-7647FA3AA4AB%7D.png" class="img-fluid figure-img"></p>
-<figcaption>Код для виконання завдань</figcaption>
+<p><img src="1_files/figure-html/cell-3-5-%7BD9CC0C34-CB86-473D-B1FE-A218EE754149%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Встановлений Python</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Завантажити, встановити і налаштувати IDE PyCharm у відповідності з інструкціями, описаними вище</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1_files/figure-html/cell-3-7-%7BE1AB3F59-9EA8-44D9-9519-B160793CEC9C%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Налаштований PyCharm</figcaption>
 </figure>
 </div>
 <ol start="3" type="1">
+<li>Завантажити, встановити і налаштувати систему контроля версій Git на вашому робочому комп’ютері.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1_files/figure-html/cell-3-3-%7B567E3289-14F6-487D-8989-59EEB12033C6%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Налаштований Git</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>Створити акаунт на GitHub та стоврити в ньому новий проєкт з іменем <strong>StudentLastName_project</strong>.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1_files/figure-html/cell-3-8-%7BF99829C9-BEBD-43B8-A583-797D1BAB2211%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Проєкт на GitHub</figcaption>
+</figure>
+</div>
+<ol start="5" type="1">
+<li>Налаштувати зв’язок PyCharm з Git.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1_files/figure-html/cell-3-10-%7BFF54CFA3-AF53-4BAD-B504-6809982C5D84%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Зв’язок між PyCharm та Git</figcaption>
+</figure>
+</div>
+<ol start="6" type="1">
+<li>Налаштувати зв’язок PyCharm з віддаленим репозиторієм на GitHub.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1_files/figure-html/cell-3-6-%7BDDAED7AB-642A-4D9C-8255-716D2EF9E995%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Копіюємо посилання на проєкт в GitHub</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1_files/figure-html/cell-3-2-%7B4E4FDFA6-B688-4250-BF17-BB1331A47695%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Додаємо посилання до Git Remotes</figcaption>
+</figure>
+</div>
+<ol start="7" type="1">
+<li>Створити файл <strong>lab_1_StudentLastName.py</strong> з кодом, який виводить фразу <strong>“Привіт, Ваше Прізвище”</strong>.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1_files/figure-html/cell-3-4-%7B56B6C1D8-F0AB-44BC-9CF3-340F648044FC%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Код з виводом на консоль прізвища</figcaption>
+</figure>
+</div>
+<ol start="8" type="1">
 <li>Закомітити файл у локальний репозиторій.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="attachment:%7B82241618-EDAB-491D-8001-1298546F93A3%7D.png" class="img-fluid figure-img"></p>
-<figcaption>Коміт файлу з завданнями</figcaption>
+<p><img src="1_files/figure-html/cell-3-1-%7B49B8D090-7346-43FD-AFE1-87653162EEFA%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Коміт файлу</figcaption>
 </figure>
 </div>
-<ol start="4" type="1">
+<ol start="9" type="1">
 <li>Відправити (“запушити”) поточну версію Git-проєкта у віддалений репозиторій на GitHub.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="attachment:%7BAAAD551C-6566-41AA-BAEC-354FF01C4E1C%7D.png" class="img-fluid figure-img"></p>
-<figcaption>Пуш файлу у віддалений репозиторій</figcaption>
+<p><img src="1_files/figure-html/cell-3-9-%7BFF06D81A-0873-4A7A-B6B9-5B42EFCF996F%7D.png" class="img-fluid figure-img"></p>
+<figcaption>Пуш на віддалений репозиторій</figcaption>
 </figure>
 </div>
-<ol start="5" type="1">
-<li>Звіт має складатися з файлу (за основу взяти <strong>цей Python-зошит</strong>) <code>lab_2_StudentLastName.ipynb</code>.</li>
+<ol start="10" type="1">
+<li>Звіт має складатися з файлу (за основу взяти <strong>цей Python-зошит</strong>) з відповідними скріншотами <code>lab_1_StudentLastName.ipynb</code>. У звіті має бути посилання на Ваш GitHub-репозиторій з Вашим проєктом та відповіді на контролі запитання.</li>
 </ol>
 </section>
 <section id="контрольні-запитання" class="level2">
 <h2 class="anchored" data-anchor-id="контрольні-запитання">Контрольні запитання</h2>
 <ol type="1">
-<li>Записати ієрархію операторів.</li>
-</ol>
+<li><p>У чому відмінність інтерпретатора від компілятора? Python – компілятор чи інтерпретатор?</p>
+<p><code>Інтерпретатор</code> виконує програму построково, без попереднього перетворення всього коду в машинний код. Кожна команда виконується відразу після прочитання.</p>
+<p><code>Компілятор</code> перетворює весь вихідний код програми в машинний код (бінарний файл), який потім виконується.</p></li>
+<li><p>Що таке IDE PyCharm?</p>
+<p><code>PyCharm</code> — це інтегроване середовище розробки (IDE) для Python. Воно надає інструменти для редагування, запуску та налагодження програм, включає в себе автозаповнення коду, підсвічування синтаксису, контроль версій, інтеграцію з системами керування базами даних та інші функції для підвищення ефективності розробки.</p></li>
+<li><p>Що таке система контроля версій (СКВ) і для чого вона призначена? У чому принципова відмінність СКВ SVN та GIT?</p>
+<p><code>Система контролю версій (СКВ)</code> — це інструмент, що дозволяє зберігати і відстежувати зміни в коді, а також керувати різними версіями проєктів. Основна мета СКВ — дозволити командам працювати над проєктами спільно, надаючи можливість відстежувати зміни, повертатися до попередніх версій та уникати конфліктів при одночасній роботі декількох розробників.</p>
 <ul>
-<li>() - дужки</li>
-<li>** - піднесення до степеня (exponentiation)</li>
-<li>*, /, //, % - множення, ділення, цілочисельне ділення, остача</li>
-<li>+, - - додавання, віднімання</li>
-<li>&lt;&lt;, &gt;&gt; - бітові зсуви</li>
-<li>&amp; - бітове І</li>
-<li>^ - бітове XOR</li>
-<li><div class="line-block">- бітове АБО</div></li>
-<li>&lt;, &lt;=, &gt;, &gt;=, ==, != - порівняння</li>
-<li>is, is not, in, not in - членство та ідентичність</li>
-<li>not - логічне заперечення</li>
-<li>and - логічне І</li>
-<li>or - логічне АБО</li>
-<li>if-else - умовний вираз</li>
-<li>=, +=, -=, <em>=, /=, //=, %=, </em>*<strong>=</strong>, &amp;=, |=, ^=, &lt;&lt;=, &gt;&gt;= - оператори присвоєння</li>
-</ul>
-<ol start="2" type="1">
-<li><p>Записати на Python обчислення виразу <span class="math inline">\(3^{3^4}\)</span></p>
-<p>x = 3 ** 3 ** 4</p>
-<p>print(x)</p></li>
-<li><p>Що робить escape-символ при виводі на екран функцією <code>print()</code>?</p></li>
+<li><code>SVN</code> — централізована СКВ. Є один центральний сервер, на якому зберігається весь код, і всі користувачі працюють з ним безпосередньо.</li>
+<li><code>GIT</code> — децентралізована СКВ. Кожен користувач має свою локальну копію репозиторію, і всі зміни можуть бути синхронізовані через віддалений репозиторій (наприклад, на GitHub).</li>
+</ul></li>
+<li><p>Що відбувається при виконанні команди <code>git add .</code>?</p>
+<p>Команда <code>git add .</code> додає всі файли в поточній директорії (включаючи піддиректорії) до індексу (staging area), тобто до “черги” для подальшого коміту. Це підготовка до збереження змін у репозиторії.</p></li>
+<li><p>Що відбувається при виконанні команди <code>git commit</code>?</p>
+<p>Команда <code>git commit</code> зберігає всі зміни, додані до індексу, у вигляді нової версії (коміту) в локальному репозиторії. При цьому потрібно додати повідомлення, яке описує, що було зроблено в цьому коміті.</p></li>
+<li><p>Якою Git-командою виконується розміщення локальної копії Git-репозиторію проєкта на віддаленому, що знаходиться на GitHub?</p>
+<p>Для розміщення локальної копії на віддаленому сервері GitHub використовується команда: <code>git push origin &lt;назва_гілки&gt;</code> та <code>git push origin main</code></p></li>
 </ol>
-<p>Escape-символ <code>\n</code> у Python представляє собою новий рядок (line break). Коли ви використовуєте його в рядку, він змушує <code>print()</code> перейти на новий рядок.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
